@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabriConn AI</title>
+    <!-- Use a modern font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom CSS for a cool gradient text effect on the main headline */
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Underline on hover effect for links */
+        .link-hover:hover {
+            text-decoration-line: underline;
+            text-underline-offset: 4px;
+            color: #d946ef;
+        }
+        /* Scale on hover effect for cards */
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Simple hover transform for buttons */
+        .btn-hover:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-extrabold text-2xl text-purple-600">FabriConn AI</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 link-hover transition-colors duration-200">Home</a>
+                <a href="#tailors" class="text-gray-600 link-hover transition-colors duration-200">Find Tailors</a>
+                <a href="#shops" class="text-gray-600 link-hover transition-colors duration-200">Fabric Shops</a>
+                <a href="#services" class="text-gray-600 link-hover transition-colors duration-200">Services</a>
+                <a href="#how-it-works" class="text-gray-600 link-hover transition-colors duration-200">How It Works</a>
+                <a href="#" class="text-gray-600 link-hover transition-colors duration-200">Impact</a>
+                <a href="#" class="text-white bg-purple-600 px-4 py-2 rounded-full font-medium btn-hover transition-transform duration-200">Login / Signup</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-2">
+            <div class="flex flex-col space-y-2">
+                <a href="#home" class="py-2 text-gray-600 link-hover">Home</a>
+                <a href="#tailors" class="py-2 text-gray-600 link-hover">Find Tailors</a>
+                <a href="#shops" class="py-2 text-gray-600 link-hover">Fabric Shops</a>
+                <a href="#services" class="py-2 text-gray-600 link-hover">Services</a>
+                <a href="#how-it-works" class="py-2 text-gray-600 link-hover">How It Works</a>
+                <a href="#" class="py-2 text-gray-600 link-hover">Impact</a>
+                <a href="#" class="py-2 text-white bg-purple-600 text-center rounded-full font-medium">Login / Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main class="pt-20">
+
+        <!-- Home Page Hero Section -->
+        <section id="home" class="bg-purple-50 py-20 md:py-32 flex items-center justify-center text-center">
+            <div class="container mx-auto px-4 max-w-4xl space-y-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                    <span class="gradient-text">Your Wardrobe’s Second Chance</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600">Connect with tailors & fabric shops near you. Repair, upcycle, and save the planet.</p>
+                <div class="pt-4">
+                    <a href="#tailors" class="inline-block px-8 py-3 bg-purple-600 text-white font-bold rounded-full shadow-lg btn-hover transition-transform duration-200">Find a Tailor</a>
+                </div>
+                <!-- Visuals -->
+                <div class="pt-10 flex justify-center">
+                    <!-- Placeholder SVG for doodle of tailor -->
+                    <svg class="w-2/3 h-auto" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="400" height="200" fill="#E5E7EB" rx="10" ry="10" />
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#6B7280">Doodle of tailor at sewing machine / Map illustration</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlights Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Scissors and thread emoji" class="text-4xl">✂️</span>
+                        <h3 class="text-xl font-semibold mt-2">Tailors near you</h3>
+                        <p class="text-gray-600">Find skilled artisans in your neighborhood for all your repair and customization needs.</p>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Spool of thread emoji" class="text-4xl">🧵</span>
+                        <h3 class="text-xl font-semibold mt-2">Fabric shops + deadstock</h3>
+                        <p class="text-gray-600">Access high-quality fabrics and unique deadstock materials to reduce waste.</p>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Globe emoji" class="text-4xl">🌍</span>
+                        <h3 class="text-xl font-semibold mt-2">Sustainable choices</h3>
+                        <p class="text-gray-600">Make an eco-friendly impact by giving your clothes a longer life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Tailors Page Section -->
+        <section id="tailors" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Find Tailors</h2>
+                <div class="flex justify-center mb-8">
+                    <input type="text" placeholder="Search by location or skill (blouse stitching, kurta, alteration…)" class="w-full md:w-2/3 p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                </div>
+                <div id="tailor-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Tailor cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Fabric Shops Page Section -->
+        <section id="shops" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Fabric Shops</h2>
+                <div id="shop-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Shop cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Page Section -->
+        <section id="services" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Our Services</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Needle and thread emoji" class="text-3xl">🪡</span>
+                        <div>
+                            <h4 class="font-semibold text-lg">Alterations</h4>
+                            <p class="text-gray-600 text-sm">Perfect fitting for your favorite outfits.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Recycle emoji" class="text-3xl">♻️</span>
+                        <div>
+                            <h4 class="font-semibold text-lg">Upcycling</h4>
+                            <p class="text-gray-600 text-sm">Give old clothes a new life.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Sparkles emoji" class="text-3xl">✨</span>
+                        <div>
+                            <h4 class="font-semibold text-lg">Custom Orders</h4>
+                            <p class="text-gray-600 text-sm">Get something made just for you.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <span role="img" aria-label="Repair emoji" class="text-3xl">🔄</span>
+                        <div>
+                            <h4 class="font-semibold text-lg">Repairs</h4>
+                            <p class="text-gray-600 text-sm">Fix zippers, buttons, and tears easily.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center p-6 space-y-4 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <div class="h-12 w-12 flex items-center justify-center rounded-full bg-purple-200 text-purple-600 text-2xl font-bold">1</div>
+                        <h4 class="font-semibold text-lg">Find a Professional</h4>
+                        <p class="text-gray-600 text-center">Search for local tailors or fabric shops by location and skill.</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 space-y-4 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <div class="h-12 w-12 flex items-center justify-center rounded-full bg-purple-200 text-purple-600 text-2xl font-bold">2</div>
+                        <h4 class="font-semibold text-lg">Book a Service</h4>
+                        <p class="text-gray-600 text-center">Book a consultation or service directly through their profile page.</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 space-y-4 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                        <div class="h-12 w-12 flex items-center justify-center rounded-full bg-purple-200 text-purple-600 text-2xl font-bold">3</div>
+                        <h4 class="font-semibold text-lg">Enjoy Your Clothes</h4>
+                        <p class="text-gray-600 text-center">Get your garments repaired, upcycled, or custom-made and enjoy them longer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-wrap justify-center space-x-6 mb-4">
+                <a href="#" class="link-hover transition-colors duration-200">About Us</a>
+                <a href="#" class="link-hover transition-colors duration-200">Contact</a>
+                <a href="#" class="link-hover transition-colors duration-200">Privacy Policy</a>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <!-- Social Media Links (placeholders) -->
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.851.071 4.298.243 5.484 1.498 5.794 5.794.059 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.851c-.243 4.298-1.498 5.484-5.794 5.794-1.267.059-1.647.07-4.851.07s-3.584-.012-4.851-.07c-4.298-.243-5.484-1.498-5.794-5.794-.059-1.267-.07-1.647-.07-4.851s.012-3.584.07-4.851c.243-4.298 1.498-5.484 5.794-5.794 1.267-.059 1.647-.07 4.851-.07zM12 0C8.751 0 8.337.014 7.053.076 2.457.345.545 2.164.276 6.76c-.062 1.284-.076 1.698-.076 4.947s.014 3.663.076 4.947c.269 4.604 2.188 6.523 6.784 6.792 1.284.062 1.698.076 4.947.076s3.663-.014 4.947-.076c4.604-.269 6.523-2.188 6.792-6.784.062-1.284.076-1.698.076-4.947s-.014-3.663-.076-4.947c-.269-4.604-2.188-6.523-6.784-6.792-1.284-.062-1.698-.076-4.947-.076zM12 6.5c-3.033 0-5.5 2.467-5.5 5.5s2.467 5.5 5.5 5.5 5.5-2.467 5.5-5.5-2.467-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11.5 20h-3.5v-12h3.5v12zm-1.75-13.5c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.75 13.5h-3.5v-6.25c0-.965-.054-1.761-.318-2.396-.263-.635-.785-1.139-1.564-1.517-.779-.378-1.782-.567-3.004-.567-1.222 0-2.225.189-3.004.567-.779.378-1.299.882-1.564 1.517-.264.635-.318 1.431-.318 2.396v6.25h-3.5v-12h3.5v2.261c.496-.867 1.155-1.534 1.977-2.001.822-.467 1.777-.7 2.868-.7 2.193 0 3.992.686 5.397 2.059 1.405 1.373 2.108 3.235 2.108 5.588v7.293z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.503 7.202c-.144-.805-.494-1.502-1.077-2.085s-1.279-.933-2.084-1.077c-1.396-.25-2.793-.375-4.202-.375s-2.806.125-4.202.375c-.805.144-1.502.494-2.085 1.077s-1.077 1.279-1.077 2.084c-.25 1.396-.375 2.793-.375 4.202s.125 2.806.375 4.202c.144.805.494 1.502 1.077 2.085s1.279.933 2.084 1.077c1.396.25 2.793.375 4.202.375s2.806-.125 4.202-.375c.805-.144 1.502-.494 2.085-1.077s1.077-1.279 1.077-2.084c.25-1.396.375-2.793.375-4.202s-.125-2.806-.375-4.202zM9.999 15.001v-6.002l6.002 3.001-6.002 3.001z"/></svg>
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">&copy; 2023 FabriConn AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggling
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Data for dynamic sections
+        const tailors = [
+            { name: "Rani Sharma", location: "Lajpat Nagar, Delhi", services: "Repairs, Custom Blouse, Alterations", price: "₹200 – ₹1000", photo: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=R" },
+            { name: "Sunita Gupta", location: "Karol Bagh, Delhi", services: "Alterations, Upcycling", price: "₹150 – ₹800", photo: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=S" },
+            { name: "Priya Singh", location: "Dwarka, Delhi", services: "Custom Orders, Bridal Wear", price: "₹500 – ₹5000", photo: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=P" }
+        ];
+
+        const shops = [
+            { name: "Mehra Fabrics", location: "Karol Bagh, Delhi", available: "Cotton, Silk, Linen", deal: "Get fabric at 30% off" },
+            { name: "Gupta Textiles", location: "Chandni Chowk, Delhi", available: "Georgette, Chiffon, Brocade", deal: "Deadstock available" },
+            { name: "Aarav Cloth House", location: "Pitampura, Delhi", available: "Rayon, Velvet, Wool", deal: "Seasonal discounts" }
+        ];
+
+        // Function to render tailor cards
+        function renderTailorCards() {
+            const container = document.getElementById('tailor-cards-container');
+            container.innerHTML = tailors.map(tailor => `
+                <div class="p-6 bg-white rounded-lg shadow-md flex items-center space-x-4 card-hover transition-transform duration-200">
+                    <img src="${tailor.photo}" alt="${tailor.name}" class="w-16 h-16 rounded-full object-cover">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-lg">${tailor.name}</h3>
+                        <p class="text-sm text-gray-500">${tailor.location}</p>
+                        <p class="text-sm text-gray-600 mt-1">Services: <span class="font-medium text-purple-600">${tailor.services}</span></p>
+                        <p class="text-sm text-gray-600">Price Range: <span class="font-medium text-purple-600">${tailor.price}</span></p>
+                    </div>
+                    <a href="#" class="px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium btn-hover transition-transform duration-200">Book Now</a>
+                </div>
+            `).join('');
+        }
+
+        // Function to render shop cards
+        function renderShopCards() {
+            const container = document.getElementById('shop-cards-container');
+            container.innerHTML = shops.map(shop => `
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md card-hover transition-transform duration-200">
+                    <h3 class="font-bold text-lg">${shop.name}</h3>
+                    <p class="text-sm text-gray-500">${shop.location}</p>
+                    <p class="text-sm text-gray-600 mt-2">Available: <span class="font-medium text-purple-600">${shop.available}</span></p>
+                    <p class="text-sm text-purple-500 mt-1">${shop.deal}</p>
+                    <a href="#" class="mt-4 inline-block px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium btn-hover transition-transform duration-200">Visit Shop</a>
+                </div>
+            `).join('');
+        }
+
+        // Call functions on page load
+        window.onload = function() {
+            renderTailorCards();
+            renderShopCards();
+        };
+    </script>
+</body>
+</html>
